@@ -34,7 +34,7 @@ const initialState = {
   fetchingSmurfs: false,
   addingSmurf: false,
   updatingSmurf: false,
-  deltingSmurf: false,
+  deletingSmurf: false,
   error: null
 }
 
@@ -46,7 +46,7 @@ const initialState = {
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
 
-function reducer(state = initialState, action) {
+function SmurfingReducer(state = initialState, action) {
   switch (action.type) {
     case FETCHING_SMURFS:
       return {
@@ -120,3 +120,5 @@ function reducer(state = initialState, action) {
       return state;
   }
 }
+
+export default SmurfingReducer;
