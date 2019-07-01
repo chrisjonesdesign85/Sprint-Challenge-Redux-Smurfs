@@ -11,7 +11,6 @@ import { connect } from 'react-redux';
 import { getSmurfs, addSmurf, deleteSmurf } from '../actions';
 import SmurfList from './SmurfList';
 import SmurfForm from './SmurfList';
-import { stat } from 'fs';
 
 class App extends Component {
   componentDidMount() {
@@ -42,12 +41,12 @@ class App extends Component {
 }
 
 // adding mapStateToProps
-const madStateToProps = state => ({
-  smurfs: stat.smurfs,
+const mapStateToProps = state => ({
+  smurfs: state.smurfs,
   fetchingSmurfs: state.fetchingSmurfs,
   addingSmurf: state.addingSmurf,
   updatingSmurf: state.updatingSmurf,
   error: StorageEvent.error,
 })
 
-export default connect(madStateToProps, { getSmurfs, addSmurfs, deleteSmurf })(App);
+export default connect(mapStateToProps, { getSmurfs, addSmurf, deleteSmurf })(App);

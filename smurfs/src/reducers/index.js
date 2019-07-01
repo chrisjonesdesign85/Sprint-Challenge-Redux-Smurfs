@@ -1,7 +1,3 @@
-/*
-  Be sure to import in all of the action types from `../actions`
-*/
-
 import {
   FETCHING_SMURFS,
   FETCHING_SMURFS_SUCCESSFUL,
